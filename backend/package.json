@@ -3,7 +3,7 @@
     "init": "^0.1.2"
   },
   "scripts": {
-    "server": "json-server db.json -m ./node_modules/json-server-auth"
+    "server": "json-server -p 4000 db.json -m ./node_modules/json-server-auth"
   },
   "devDependencies": {
     "json-server": "^0.17.3",
