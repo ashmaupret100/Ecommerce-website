@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "catogory": "women",
+      "name": "Dani Disco Short Sleeve Shirt Lollipop",
+      "img_url": "https://www.saturdaysnyc.com/cdn/shop/files/W42326SS01-ON-LOLLOPOP_15_2048x.jpg?v=1690994101"
+    },
+    {
+      "catogory": "men",
+      "name": "Sound Relaxed Short Sleeve Tee",
+      "img_url": "https://www.saturdaysnyc.com/cdn/shop/files/220405_2048x.jpg?v=1690567433"
+    }
+  ]
+}

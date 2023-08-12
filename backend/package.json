@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "init": "^0.1.2"
+  },
+  "scripts": {
+    "server-users": "json-server -p 4000 users/db.json -m ./node_modules/json-server-auth",
+    "server-products": "json-server -p 4001 products/db.json -m ./node_modules/json-server-auth"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.3",
+    "json-server-auth": "^2.1.0"
+  }
+}
