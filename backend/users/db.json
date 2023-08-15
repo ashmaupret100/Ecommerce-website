@@ -1,3 +1,9 @@
 {
-  "users": []
+  "users": [
+    {
+      "email": "ashma.upreti99@gmail.com",
+      "password": "$2a$10$aOwFimoEfO9LjCEFwUiQZOp97JoM/mKe.G4zlYBVSaFuoHDtNEEH.",
+      "id": 1
+    }
+  ]
 }
