@@ -45,22 +45,34 @@ function Register() {
 
   return (
     <div>
+      <h1>Register</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}>
         <Form>
-          <label>Name</label>
-          <Field type="text" name="name" />
+          <div>
+            <label>Name</label>
+            <Field type="text" name="name" />
+          </div>
 
-          <label>User Name</label>
-          <Field type="text" name="username" />
-          <label>Email</label>
-          <Field type="email" name="email" />
-          <label>Password</label>
-          <Field type="password" name="password" />
-          <label>Re Enter Password</label>
-          <Field type="password" name="confirmpassword" />
+          <div>
+            <label>User Name</label>
+            <Field type="text" name="username" />
+          </div>
+          <div>
+            <label>Email</label>
+            <Field type="email" name="email" />
+          </div>
+          <div>
+            <label>Password</label>
+            <Field type="password" name="password" />
+          </div>
+          <div>
+            <label>Re Enter Password</label>
+            <Field type="password" name="confirmpassword" />
+          </div>
+
           <button type="submit" className="bg-red-100">
             Register
           </button>
