@@ -4,6 +4,11 @@
       "email": "ashma.upreti99@gmail.com",
       "password": "$2a$10$aOwFimoEfO9LjCEFwUiQZOp97JoM/mKe.G4zlYBVSaFuoHDtNEEH.",
       "id": 1
+    },
+    {
+      "email": "ashma@gmail.com",
+      "password": "$2a$10$0XazgMAa51f2FSuHdbsiHe6LZkwk39XS6mElFupO.FUfqYcnFrdaS",
+      "id": 2
     }
   ]
 }
