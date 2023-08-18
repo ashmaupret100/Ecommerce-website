@@ -1,14 +1,48 @@
 {
-  "products": [
+  "catogory-women": [
     {
-      "catogory": "women",
-      "name": "Dani Disco Short Sleeve Shirt Lollipop",
-      "img_url": "https://www.saturdaysnyc.com/cdn/shop/files/W42326SS01-ON-LOLLOPOP_15_2048x.jpg?v=1690994101"
+      "id": 1,
+      "title": "Dani Disco Short Sleeve Shirt Lollipop",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/W42326SS01-ON-LOLLOPOP_15_2048x.jpg?v=1690994101",
+      "quantity": 5,
+      "price": 24.0
     },
     {
-      "catogory": "men",
-      "name": "Sound Relaxed Short Sleeve Tee",
-      "img_url": "https://www.saturdaysnyc.com/cdn/shop/files/220405_2048x.jpg?v=1690567433"
+      "id": 2,
+      "title": "Sound Relaxed Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220405_2048x.jpg?v=1690567433",
+      "quantity": 5,
+      "price": 24.0
+    }
+  ],
+  "category-men": [
+    {
+      "id": 1,
+      "title": "Sound Relaxed Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220405_2048x.jpg?v=1690567433",
+      "quantity": 5,
+      "price": 24.0
+    },
+    {
+      "id": 2,
+      "title": "Sound Relaxed Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220375_2048x.jpg?v=1690918853",
+      "quantity": 5,
+      "price": 60.0
+    },
+    {
+      "id": 3,
+      "title": "SZ SNYC Relaxed Fit Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/products/M22329SG05-CARAMEL_01_2048x.jpg?v=1675783499",
+      "quantity": 5,
+      "price": 60.0
+    },
+    {
+      "id": 4,
+      "title": "Sound Relaxed Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220392_2048x.jpg?v=1690567433",
+      "quantity": 5,
+      "price": 60.0
     }
   ]
 }

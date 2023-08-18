@@ -13,6 +13,14 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        raleway: ["Raleway", "sans-serif"],
+      },
+      letterSpacing: {
+        "2": "2px",
+        "4": "4px",
+        custom: "0.25em",
+      },
     },
   },
   plugins: [],
