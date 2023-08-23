@@ -3,23 +3,24 @@ interface IInfo {
   image: string;
   title: string;
 }
-const Cart: React.FC<IInfo> = ({ image, title }) => {
+const Cart = () => {
   return (
     <>
-      <div className="h-72 flex flex-col bg-gray-100">
+      <div className=" flex flex-col  w-72 h-96 p-4">
         <div>
-          <img src={image} alt={title} className="w-full  object-cover" />
+          <img
+            src="https://www.saturdaysnyc.com/cdn/shop/files/A42306DS01-GULF-COAST_01_2048x.jpg?v=1690484448"
+            className="w-full h-80 object-cover"
+          />
         </div>
 
-        <div className="text-black bg-gray-100">{title}</div>
+        <div className="text-black text-sm tracking-2 font-light">
+          product name
+        </div>
+        <div className="text-sm ">$ 60.00</div>
+        <button>Add To Cart</button>
       </div>
     </>
-    // <div className=" w-85p h-72 overflow-hidden">
-    //   <img src={image} alt={title} className="w-full h-full object-cover" />
-    //   <div className="   text-black flex flex-col justify-center items-center">
-    //     <p className="text-lg">{title}</p>
-    //   </div>
-    // </div>
   );
 };
 

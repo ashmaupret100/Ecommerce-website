@@ -40,7 +40,7 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <div className="flex justify-evenly">
+        {/* <div className="flex justify-evenly">
           <Cart
             image="https://www.saturdaysnyc.com/cdn/shop/files/0524-103_2048x.jpg?v=1690918148"
             title="Dekalb Heavyweight Mockneck Long Sleeve Pocket Tee"
@@ -58,7 +58,7 @@ export default function Home() {
             image="https://www.saturdaysnyc.com/cdn/shop/files/06126205_2048x.jpg?v=1690563783"
             title="Driessen Overshirt"
           />
-        </div>
+        </div> */}
       </main>
     </>
   );

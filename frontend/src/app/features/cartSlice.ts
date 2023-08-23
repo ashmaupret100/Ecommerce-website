@@ -1,21 +1,8 @@
 "use client";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
-import { useEffect } from "react";
 import toast from "react-hot-toast";
 
-// useEffect(() => {
-//   // Fetching data from json server
-//   axios
-//     .get("http://localhost:4001/catogory-women")
-//     .then((response) => {
-//       console.log(response.data);
-//     })
-//     .catch((error) => {
-//       console.log("error", error);
-//     });
-// }, []);
 export interface Items {
   id: number;
   title: string;

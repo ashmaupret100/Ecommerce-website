@@ -1,9 +1,10 @@
 {
-  "catogory-women": [
+  "products": [
     {
       "id": 1,
       "title": "Dani Disco Short Sleeve Shirt Lollipop",
       "image": "https://www.saturdaysnyc.com/cdn/shop/files/W42326SS01-ON-LOLLOPOP_15_2048x.jpg?v=1690994101",
+      "category": "female",
       "quantity": 5,
       "price": 24.0
     },
@@ -11,38 +12,58 @@
       "id": 2,
       "title": "Sound Relaxed Short Sleeve Tee",
       "image": "https://www.saturdaysnyc.com/cdn/shop/files/220405_2048x.jpg?v=1690567433",
-      "quantity": 5,
-      "price": 24.0
-    }
-  ],
-  "category-men": [
-    {
-      "id": 1,
-      "title": "Sound Relaxed Short Sleeve Tee",
-      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220405_2048x.jpg?v=1690567433",
+      "category": "female",
       "quantity": 5,
       "price": 24.0
     },
-    {
-      "id": 2,
-      "title": "Sound Relaxed Short Sleeve Tee",
-      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220375_2048x.jpg?v=1690918853",
-      "quantity": 5,
-      "price": 60.0
-    },
+
     {
       "id": 3,
-      "title": "SZ SNYC Relaxed Fit Short Sleeve Tee",
-      "image": "https://www.saturdaysnyc.com/cdn/shop/products/M22329SG05-CARAMEL_01_2048x.jpg?v=1675783499",
+      "title": "Sound Relaxed Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220405_2048x.jpg?v=1690567433",
+      "category": "male",
       "quantity": 5,
-      "price": 60.0
+      "price": 24.0
     },
     {
       "id": 4,
       "title": "Sound Relaxed Short Sleeve Tee",
-      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220392_2048x.jpg?v=1690567433",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220375_2048x.jpg?v=1690918853",
+      "category": "male",
       "quantity": 5,
       "price": 60.0
+    },
+    {
+      "id": 5,
+      "title": "SZ SNYC Relaxed Fit Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/products/M22329SG05-CARAMEL_01_2048x.jpg?v=1675783499",
+      "category": "male",
+      "quantity": 5,
+      "price": 60.0
+    },
+    {
+      "id": 6,
+      "title": "Sound Relaxed Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/220392_2048x.jpg?v=1690567433",
+      "category": "male",
+      "quantity": 5,
+      "price": 60.0
+    },
+    {
+      "id": 7,
+      "title": "Alici Mini Skirt Very Berry",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/W32332SR01-ON-VERY-BERY_04_2048x.jpg?v=1683744105",
+      "category": "female",
+      "quantity": 5,
+      "price": 120.0
+    },
+    {
+      "id": 8,
+      "title": "Denise Waiakeakua Skirt Fuchsia Pink",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/products/Capture231_2048x.jpg?v=1677176319",
+      "category": "female",
+      "quantity": 5,
+      "price": 120.0
     }
   ]
 }
