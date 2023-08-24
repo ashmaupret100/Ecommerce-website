@@ -64,6 +64,38 @@
       "category": "female",
       "quantity": 5,
       "price": 120.0
+    },
+    {
+      "id": 9,
+      "title": "Naomi Rib Knit Dress Black",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/products/W32331DR01-ON-BLACK_06_2048x.jpg?v=1682010273",
+      "category": "female",
+      "quantity": 5,
+      "price": 135.0
+    },
+    {
+      "id": 10,
+      "title": "Martina Knit Dress Ivory",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/W42331DR01-ON-IVORY_01_2048x.jpg?v=1690990430",
+      "category": "female",
+      "quantity": 5,
+      "price": 140.0
+    },
+    {
+      "id": 11,
+      "title": "Morimoto Nylon Jacket Ganache",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/products/Capture161_2048x.jpg?v=1663797216",
+      "category": "female",
+      "quantity": 5,
+      "price": 425.0
+    },
+    {
+      "id": 8,
+      "title": "Signature Fitted Tee White",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/products/Capture33_cfa2c84c-e810-4e29-88e8-058042299e29_2048x.jpg?v=1677770691",
+      "category": "female",
+      "quantity": 5,
+      "price": 52.0
     }
   ]
 }
