@@ -1,7 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 function Navbar() {
-  const cartnumber = 0;
+  const { itemQuantity } = useSelector((state) => state.cart);
   return (
     <>
       <div className="font-raleway flex justify-center items-center h-6 bg-black text-slate-300 text-sm">
@@ -46,9 +47,9 @@ function Navbar() {
               SIGN IN
             </a>
             <a
-              href="/cart"
+              href="/cartPage"
               className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
-              CART &#40;{cartnumber}&#41;
+              CART &#40;{itemQuantity}&#41;
             </a>
           </div>
         </div>

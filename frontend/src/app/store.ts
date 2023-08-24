@@ -1,14 +1,14 @@
-// "use client";
-// import { configureStore } from "@reduxjs/toolkit";
-// import { cartSlice } from "./features/cartSlice";
-// import cartReducer from "./features/cartSlice";
-// const store = configureStore({
-//   reducer: {
-//     cart: cartReducer,
-//   },
-// });
+"use client";
+import { configureStore } from "@reduxjs/toolkit";
+import cartReducer from "./features/cartSlice";
+import productReducer from "./features/productSlice";
+import { features } from "process";
+
+export const store = configureStore({
+  reducer: {
+    cart: cartReducer,
+    product: productReducer,
+  },
+});
 
 // export default store;
-// export type RootState = ReturnType<typeof store.getState>;
-
-// export type AppDispatch = typeof store.dispatch;

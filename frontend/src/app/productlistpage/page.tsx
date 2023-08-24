@@ -3,15 +3,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Navbar from "../components/navbar/navbar";
-import Cart from "../components/cart/cart";
+
 import { useGetAllProductsQuery } from "../features/productApi";
-// import { addToCart } from "../features/cartSlice";
+import { addToCart } from "../features/cartSlice";
 import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { CiHeart } from "react-icons/ci";
 
 function ProductList() {
-  // const dispatch = useDispatch();
-  // const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
   // const { data, error, isLoading } = useGetAllProductsQuery();
   interface Items {
     id: number;
@@ -35,6 +35,10 @@ function ProductList() {
         console.log("error", error);
       });
   }, []);
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
   return (
     <>
       <Navbar />
@@ -55,14 +59,15 @@ function ProductList() {
               <div className="text-black text-sm font-normal">{item.title}</div>
               <div className="text-sm">${item.price.toFixed(2)}</div>
               <div className="flex">
-                <PiShoppingCartSimpleThin />
+                <PiShoppingCartSimpleThin
+                  onClick={() => handleAddToCart(item)}
+                />
                 <CiHeart />
               </div>
             </div>
           </div>
         ))}
       </div>
-      <Cart />
     </>
   );
 }
