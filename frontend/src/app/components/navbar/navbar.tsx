@@ -1,8 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Link from "next/link";
 
 function Navbar() {
-  const { itemQuantity } = useSelector((state) => state.cart);
+  const itemQuantity = useSelector((state) => state.cart.itemQuantity);
+  console.log(itemQuantity);
+
   return (
     <>
       <div className="font-raleway flex justify-center items-center h-6 bg-black text-slate-300 text-sm">
@@ -11,26 +14,26 @@ function Navbar() {
       <div className="bg-gray-100 ">
         <div className="bg-white p-4 flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <a
+            <Link
               href="/productlistpage"
               className=" font-raleway tracking-2 text-slate-900 ">
               MEN
-            </a>
-            <a
+            </Link>
+            <Link
               href="/productlistpage"
               className="text-slate-900 tracking-2 hover:text-slate-900">
               WOMEN
-            </a>
-            <a
+            </Link>
+            <Link
               href="/productlistpage"
               className="text-slate-900 tracking-2 hover:text-slate-900">
               ACCESSORIES
-            </a>
-            <a
+            </Link>
+            <Link
               href="/productlistpage"
               className="text-slate-900 tracking-2 hover:text-slate-900">
               MAGAZINE
-            </a>
+            </Link>
           </div>
 
           <div className="text-lg font-bold">NYC Fashion</div>
@@ -41,16 +44,16 @@ function Navbar() {
               className="border border-gray-300 px-2 py-1 rounded-md"
               placeholder="Search"
             />
-            <a
+            <Link
               href="/register"
               className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
               SIGN IN
-            </a>
-            <a
+            </Link>
+            <Link
               href="/cartPage"
               className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
               CART &#40;{itemQuantity}&#41;
-            </a>
+            </Link>
           </div>
         </div>
       </div>

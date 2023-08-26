@@ -6,19 +6,22 @@ import toast from "react-hot-toast";
 export interface Items {
   id: number;
   title: string;
+  category: string;
   price: number;
   quantity: number;
   image: string;
 }
 export interface CartState {
   items: Items[];
-  itemsInCart: number;
+
   totalAmount: number;
   itemQuantity: number;
 }
+
+// item Quantity needed?
 const initialState: CartState = {
   items: [],
-  itemsInCart: 0,
+
   totalAmount: 0,
   itemQuantity: 0,
 };

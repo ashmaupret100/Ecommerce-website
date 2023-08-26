@@ -3,15 +3,18 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Navbar from "../components/navbar/navbar";
+import { fetchProduct } from "../features/productSlice";
 
 import { useGetAllProductsQuery } from "../features/productApi";
 import { addToCart } from "../features/cartSlice";
 import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { CiHeart } from "react-icons/ci";
+import { AnyAction } from "redux";
+import { RootState, AppDispatch } from "../store";
 
 function ProductList() {
-  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+
   // const { data, error, isLoading } = useGetAllProductsQuery();
   interface Items {
     id: number;
@@ -21,23 +24,18 @@ function ProductList() {
     quantity: number;
     image: string;
   }
-  const [product, setProduct] = useState<Items[]>([]);
+  const products = useSelector((state: RootState) => state.products.item);
+  const a = useSelector((state: RootState) => state.cart.items);
+  console.log(a);
+  console.log(products);
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    // Fetching data from json server
-    axios
-      .get("http://localhost:4001/products")
-      .then((response) => {
-        console.log(response.data);
-        setProduct(response.data);
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
+    dispatch(fetchProduct());
   }, []);
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+  const handleAddToCart = (item: Items) => {
+    dispatch(addToCart(item));
   };
   return (
     <>
@@ -46,7 +44,7 @@ function ProductList() {
       <div className="border-t border-gray-300 m-4"></div>
 
       <div className="flex flex-wrap -mx-4">
-        {product.map((item) => (
+        {products.map((item: Items) => (
           <div key={item.id} className="w-1/4 px-4">
             <div className="flex flex-col  h-96 p-4">
               <div>
