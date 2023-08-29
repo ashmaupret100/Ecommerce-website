@@ -12,9 +12,10 @@ import { CiHeart } from "react-icons/ci";
 import { AnyAction } from "redux";
 import { RootState, AppDispatch } from "../store";
 import Footer from "../components/footer/footer";
+import { addToWishList } from "../features/wishListSlice";
 
 function ProductList() {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: RootState) => state.cart);
 
   // const { data, error, isLoading } = useGetAllProductsQuery();
   interface Items {
@@ -37,6 +38,9 @@ function ProductList() {
 
   const handleAddToCart = (item: Items) => {
     dispatch(addToCart(item));
+  };
+  const handleAddToWish = (item: Items) => {
+    dispatch(addToWishList(item));
   };
   return (
     <>
@@ -61,7 +65,7 @@ function ProductList() {
                 <PiShoppingCartSimpleThin
                   onClick={() => handleAddToCart(item)}
                 />
-                <CiHeart />
+                <CiHeart onClick={() => handleAddToWish(item)} />
               </div>
             </div>
           </div>

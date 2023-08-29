@@ -97,5 +97,103 @@
       "quantity": 5,
       "price": 52.0
     }
+  ],
+  "men": [
+    {
+      "id": 1,
+      "title": "Dani Disco Short Sleeve Shirt Lollipop",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/W42326SS01-ON-LOLLOPOP_15_2048x.jpg?v=1690994101",
+      "category": "male",
+      "quantity": 5,
+      "price": 24.0
+    },
+    {
+      "id": 2,
+      "title": "York Camp Collar Short Sleeve Shirt",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/190168_2048x.jpg?v=1691956980",
+      "category": "male",
+      "quantity": 5,
+      "price": 155.0
+    },
+    {
+      "id": 3,
+      "title": "York Mini Houndstooth Short Sleeve Shirt",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/136462_2048x.jpg?v=1690915912",
+      "category": "male",
+      "quantity": 5,
+      "price": 155.0
+    },
+    {
+      "id": 4,
+      "title": "Disco Print Canty Short Sleeve Shirt",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/0518-230_2048x.jpg?v=1690564718",
+      "category": "male",
+      "quantity": 5,
+      "price": 250.0
+    },
+    {
+      "id": 5,
+      "title": "Ross Brushed Cotton Pant",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/06126348_2048x.jpg?v=1690899559",
+      "category": "male",
+      "quantity": 5,
+      "price": 240.0
+    },
+    {
+      "id": 6,
+      "title": "Records Standard Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/0601-159_2048x.jpg?v=1690559599",
+      "category": "male",
+      "quantity": 5,
+      "price": 64.0
+    },
+    {
+      "id": 7,
+      "title": "Signature Standard Short Sleeve Tee",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/0531-175_2048x.jpg?v=1690922339",
+      "category": "male",
+      "quantity": 5,
+      "price": 240.0
+    },
+    {
+      "id": 8,
+      "title": "Nolan Wide Wale Cord Long Sleeve Shirt",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/060275_2048x.jpg?v=1690559644",
+      "category": "male",
+      "quantity": 5,
+      "price": 400.0
+    },
+    {
+      "id": 9,
+      "title": "Morris Wide Wale Cord Pant",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/shoot-283_2048x.jpg?v=1690909481",
+      "category": "male",
+      "quantity": 5,
+      "price": 240.0
+    },
+    {
+      "id": 10,
+      "title": "Bowery Signature Crew",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/060232_2048x.jpg?v=1690899592",
+      "category": "male",
+      "quantity": 5,
+      "price": 240.0
+    },
+    {
+      "id": 11,
+      "title": "Abrams Signature Sweatpant",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/shoot-245_2048x.jpg?v=1690993257",
+      "category": "male",
+      "quantity": 5,
+      "price": 125.0
+    },
+    {
+      "id": 12,
+      "title": "Bowery Cheetah Crew Strawberry Cream",
+      "image": "https://www.saturdaysnyc.com/cdn/shop/files/136502_2048x.jpg?v=1690899601",
+      "category": "male",
+      "quantity": 5,
+      "price": 125.0
+    }
   ]
 }

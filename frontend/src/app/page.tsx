@@ -6,6 +6,8 @@ import Cart from "./components/cart/cart";
 import { useEffect } from "react";
 import axios from "axios";
 import Footer from "./components/footer/footer";
+import MenSection from "./components/mensection";
+import WomenSection from "./components/womensection";
 
 export default function Home() {
   return (
@@ -32,34 +34,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="m-12">
-          <p className="text-4xl">Men's New Arrivals</p>
-          <div className="flex">
-            <span>Shop All</span>
-            <span className="m-2 transform transition-transform hover:translate-x-2">
-              <IoIosArrowRoundForward />
-            </span>
-          </div>
-        </div>
-        {/* <div className="flex justify-evenly">
-          <Cart
-            image="https://www.saturdaysnyc.com/cdn/shop/files/0601-127_2048x.jpg?v=1690922194"
-            title="Dekalb Heavyweight Mockneck Long Sleeve Pocket Tee"
-          />
-          <Cart
-            image="https://www.saturdaysnyc.com/cdn/shop/files/A42306DS01-GULF-COAST_01_2048x.jpg?v=1690484448"
-            title="Idris Loafer
-            Gulf Coast"
-          />
-          <Cart
-            image="https://www.saturdaysnyc.com/cdn/shop/products/BBR53360_c23_2048x.jpg?v=1681318256"
-            title="Logo Sock"
-          />
-          <Cart
-            image="https://www.saturdaysnyc.com/cdn/shop/files/06126205_2048x.jpg?v=1690563783"
-            title="Driessen Overshirt"
-          />
-        </div> */}
+
+        <MenSection />
+        <WomenSection />
         <Footer />
       </main>
     </>

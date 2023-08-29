@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Link from "next/link";
-
+import { AiOutlineHeart } from "react-icons/ai";
 function Navbar() {
   const itemQuantity = useSelector((state) => state.cart.itemQuantity);
   console.log(itemQuantity);
@@ -50,6 +50,11 @@ function Navbar() {
               href="/register"
               className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
               SIGN IN
+            </Link>
+            <Link
+              href="/wishlist"
+              className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
+              <AiOutlineHeart />
             </Link>
             <Link
               href="/cartPage"
