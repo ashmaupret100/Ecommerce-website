@@ -5,6 +5,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import Cart from "./components/cart/cart";
 import { useEffect } from "react";
 import axios from "axios";
+import Footer from "./components/footer/footer";
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
         </div>
         {/* <div className="flex justify-evenly">
           <Cart
-            image="https://www.saturdaysnyc.com/cdn/shop/files/0524-103_2048x.jpg?v=1690918148"
+            image="https://www.saturdaysnyc.com/cdn/shop/files/0601-127_2048x.jpg?v=1690922194"
             title="Dekalb Heavyweight Mockneck Long Sleeve Pocket Tee"
           />
           <Cart
@@ -59,6 +60,7 @@ export default function Home() {
             title="Driessen Overshirt"
           />
         </div> */}
+        <Footer />
       </main>
     </>
   );

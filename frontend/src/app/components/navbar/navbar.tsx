@@ -36,7 +36,9 @@ function Navbar() {
             </Link>
           </div>
 
-          <div className="text-lg font-bold">NYC Fashion</div>
+          <Link href="/" className="text-lg font-bold">
+            NYC Fashion
+          </Link>
 
           <div className="flex items-center space-x-4">
             <input

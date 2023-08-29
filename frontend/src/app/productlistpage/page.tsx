@@ -11,6 +11,7 @@ import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { CiHeart } from "react-icons/ci";
 import { AnyAction } from "redux";
 import { RootState, AppDispatch } from "../store";
+import Footer from "../components/footer/footer";
 
 function ProductList() {
   const cart = useSelector((state) => state.cart);
@@ -66,6 +67,7 @@ function ProductList() {
           </div>
         ))}
       </div>
+      <Footer />
     </>
   );
 }
