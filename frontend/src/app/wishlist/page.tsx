@@ -9,16 +9,17 @@ import {
 } from "../features/wishListSlice";
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
-import { TbShoppingCart } from "react-icons/tb";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { PiSmileySadThin } from "react-icons/pi";
 import { addToCart } from "../features/cartSlice";
+import { CiShoppingCart } from "react-icons/ci";
+import { AiOutlineDelete } from "react-icons/ai";
 
 const wishlistpage = () => {
   const item = useSelector((state: RootState) => state.wishlist.item);
   const dispatch = useDispatch();
 
   const handleCart = (item: Items) => {
-    dispatch(addToWishList(item));
+    dispatch(addToCart(item));
   };
   const handleRemove = (id: number) => {
     dispatch(removeFromWishList(id));
@@ -27,49 +28,43 @@ const wishlistpage = () => {
     <>
       <div className="w-full h-auto ">
         <Navbar />
-        <div className=" border-2 bg-stone-300 w-[75%] mx-auto mb-5 p-5 text-center font-serif">
-          <h1 className="text-4xl capitalize">Your WishList</h1>
-        </div>
+        <div className="text-center mt-6">WISHLIST</div>
+        <div className="border-t border-gray-300 m-4"></div>
         {item.length === 0 ? (
           <div className="flex flex-col mx-auto justify-center items-center text-3xl h-screen border-2 bg-white w-[75%]">
             <p className="p-3"> Your WishList is Empty! </p>
-            <TbShoppingCart size={70} />
+            <PiSmileySadThin size={70} />
           </div>
         ) : (
           <div className="grid grid-cols-3 gap-4 w-[75%] mx-auto  text-xl p-4">
             {item.map((item) => (
-              <div className="bg-stone-300 p-4 h-full flex flex-col drop-shadow-lg shadow-stone-950">
-                <button
-                  className="hover:text-red-500 hover:font-extrabold text-2xl flex ml-auto mb-4"
-                  onClick={() => {
-                    handleRemove(item.id);
-                  }}>
-                  <AiOutlineCloseCircle size={26} />
-                </button>
-                <div className="w-full h-80 flex items-center mx-auto bg-white mb-4 justify-center rounded-md">
-                  {
+              <div className=" p-4 h-full flex flex-col ">
+                <div className=" flex flex-col  w-72 h-96 p-4">
+                  <div>
+                    <AiOutlineDelete
+                      className="fill-slate-700"
+                      onClick={() => {
+                        handleRemove(item.id);
+                      }}
+                    />
+                    <CiShoppingCart onClick={() => handleCart(item)} />
                     <img
                       src={item.image}
-                      width="200px"
-                      className="object-contain"
+                      className="w-full h-80 object-cover"
                     />
-                  }
+                  </div>
+
+                  <div className="text-black text-sm tracking-2 font-light">
+                    {item.title}
+                  </div>
+                  <div className="text-sm ">$ {item.price}</div>
                 </div>
-
-                <p className="mb-1 text-left"> {item.title}</p>
-
-                <p className="font-serif mb-6 text-left">$ {item.price}</p>
-                <button
-                  className=" mt-auto w-full p-2 rounded-md font-semibold border-stone-500  border-2 hover:bg-stone-500 hover:border-none hover:text-white"
-                  onClick={() => handleCart(item)}>
-                  Add To Cart
-                </button>
               </div>
             ))}
           </div>
         )}
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

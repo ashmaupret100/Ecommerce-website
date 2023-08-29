@@ -15,7 +15,7 @@ const footerList = [
 function Footer() {
   return (
     <>
-      <div className="border-t border-gray-300 m-4"></div>
+      <div className="border-t border-gray-300 m-4 mt-8"></div>
       <div className="flex ml-4">
         <div className="flex flex-col text-sm p-2">
           {footerList.map((each) => (
