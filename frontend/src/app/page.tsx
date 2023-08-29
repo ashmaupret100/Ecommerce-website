@@ -36,7 +36,7 @@ export default function Home() {
           <p className="text-4xl">Men's New Arrivals</p>
           <div className="flex">
             <span>Shop All</span>
-            <span className="m-2">
+            <span className="m-2 transform transition-transform hover:translate-x-2">
               <IoIosArrowRoundForward />
             </span>
           </div>
