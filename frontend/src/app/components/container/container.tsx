@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../navbar/narbar";
+import Navbar from "../navbar/navbar";
 
 function Container() {
   return (

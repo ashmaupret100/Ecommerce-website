@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Navbar from "../components/navbar/navbar";
+import Footer from "../components/footer/footer";
 
 function Register() {
   const router = useRouter();
@@ -44,41 +46,72 @@ function Register() {
   }
 
   return (
-    <div>
-      <h1>Register</h1>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}>
-        <Form>
-          <div>
-            <label>Name</label>
-            <Field type="text" name="name" />
-          </div>
+    <>
+      <Navbar />
+      <div className="border-t border-gray-300 m-4"></div>
+      <div className="flex flex-col justify-center items-center h-screen  w-full ">
+        <h1 className="text-4xl">Sign Up</h1>
+        <span className="text-slate-600">
+          Create an account for faster checkout.
+        </span>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}>
+          <Form className="flex flex-col ">
+            <div>
+              <Field
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                className="bg-gray-100 text-xs border border-gray-300 px-3 py-2 mt-2 transition duration-300 hover:bg-gray-100 focus:outline-none w-full "
+              />
+            </div>
+            <div className="flex mt-2 w-full">
+              <div>
+                <Field
+                  type="text"
+                  name="name"
+                  placeholder="First Name"
+                  className="bg-gray-100 text-xs border border-gray-300 px-3 py-2   transition duration-300 hover:bg-gray-100 focus:outline-none "
+                />
+              </div>
+              <div>
+                <Field
+                  type="text"
+                  name="last name"
+                  placeholder="Last Name"
+                  className="bg-gray-100 text-xs border border-gray-300 px-3 py-2 ml-2 transition duration-300 hover:bg-gray-100 focus:outline-none  "
+                />
+              </div>
+            </div>
+            <div>
+              <Field
+                type="password"
+                name="password"
+                placeholder="Password"
+                className="bg-gray-100 text-xs border border-gray-300 px-3 py-2 mt-2  transition duration-300 hover:bg-gray-100 focus:outline-none w-full "
+              />
+            </div>
+            <div>
+              <Field
+                type="password"
+                name="confirmpassword"
+                placeholder="Confirm Password"
+                className="bg-gray-100 text-xs border border-gray-300 px-3 py-2  mt-2 transition duration-300 hover:bg-gray-100 focus:outline-none  w-full"
+              />
+            </div>
 
-          <div>
-            <label>User Name</label>
-            <Field type="text" name="username" />
-          </div>
-          <div>
-            <label>Email</label>
-            <Field type="email" name="email" />
-          </div>
-          <div>
-            <label>Password</label>
-            <Field type="password" name="password" />
-          </div>
-          <div>
-            <label>Re Enter Password</label>
-            <Field type="password" name="confirmpassword" />
-          </div>
-
-          <button type="submit" className="bg-red-100">
-            Register
-          </button>
-        </Form>
-      </Formik>
-    </div>
+            <button
+              type="submit"
+              className="bg-black text-slate-100 px-3 py-2 mt-2 ">
+              Register
+            </button>
+          </Form>
+        </Formik>
+      </div>
+      <Footer />
+    </>
   );
 }
 

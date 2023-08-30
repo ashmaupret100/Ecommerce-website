@@ -9,6 +9,11 @@
       "email": "ashma@gmail.com",
       "password": "$2a$10$0XazgMAa51f2FSuHdbsiHe6LZkwk39XS6mElFupO.FUfqYcnFrdaS",
       "id": 2
+    },
+    {
+      "email": "archu@gmail.com",
+      "password": "$2a$10$EBT0qjkPwkw3cz0su4xX3uU.X6jfBDEH8ycjHmAkurL2EP/kRwABW",
+      "id": 3
     }
   ]
 }

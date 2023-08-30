@@ -5,6 +5,8 @@ import * as Yup from "yup";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Navbar from "../components/navbar/navbar";
+import Footer from "../components/footer/footer";
 
 function Login() {
   const router = useRouter();
@@ -34,32 +36,48 @@ function Login() {
       });
   };
   return (
-    <div>
-      <h1>Login</h1>
-      <Formik
-        initialValues={initialvalues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}>
-        <Form>
-          <div>
-            <label>User Name</label>
-            <Field type="text" name="username" />
-          </div>
-          <div>
-            <label>Email</label>
-            <Field type="email" name="email" />
-          </div>
-          <div>
-            <label>Password</label>
-            <Field type="password" name="password" />
-          </div>
+    <>
+      <Navbar />
+      <div className="border-t border-gray-300 m-4"></div>
+      <div className="flex flex-col justify-center items-center h-screen  w-full ">
+        <h1 className="text-4xl">Login</h1>
 
-          <button type="submit" className="bg-red-100">
-            Login
-          </button>
-        </Form>
-      </Formik>
-    </div>
+        <Formik
+          initialValues={initialvalues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}>
+          <Form className="flex flex-col ">
+            <div>
+              <Field
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                className="bg-gray-100 text-xs border border-gray-300 px-3 py-2 mt-2 transition duration-300 hover:bg-gray-100 focus:outline-none w-full "
+              />
+            </div>
+
+            <div>
+              <Field
+                type="password"
+                name="password"
+                placeholder="Password"
+                className="bg-gray-100 text-xs border border-gray-300 px-3 py-2 mt-2  transition duration-300 hover:bg-gray-100 focus:outline-none w-full "
+              />
+            </div>
+            <span className="mt-2 text-xs text-slate-500">
+              Forgot Password ?
+            </span>
+
+            <button
+              type="submit"
+              className="bg-black text-slate-100 px-3 py-2 mt-2 ">
+              Login
+            </button>
+          </Form>
+        </Formik>
+      </div>
+      <Footer />
+    </>
   );
 }
 
