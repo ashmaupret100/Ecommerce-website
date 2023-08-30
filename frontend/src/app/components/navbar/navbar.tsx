@@ -2,8 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import { AiOutlineHeart } from "react-icons/ai";
+import { RootState } from "@/app/store";
 function Navbar() {
-  const itemQuantity = useSelector((state) => state.cart.itemQuantity);
+  const itemQuantity = useSelector(
+    (state: RootState) => state.cart.itemQuantity
+  );
   console.log(itemQuantity);
 
   return (

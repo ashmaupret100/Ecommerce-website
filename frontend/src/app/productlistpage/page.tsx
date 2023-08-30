@@ -59,13 +59,21 @@ function ProductList() {
                   className="w-full h-72 object-cover"
                 />
               </div>
-              <div className="text-black text-sm font-normal">{item.title}</div>
-              <div className="text-sm">${item.price.toFixed(2)}</div>
-              <div className="flex">
-                <PiShoppingCartSimpleThin
-                  onClick={() => handleAddToCart(item)}
-                />
-                <CiHeart onClick={() => handleAddToWish(item)} />
+              <div className="text-black text-sm font-normal mt-2">
+                {item.title}
+              </div>
+              <div className="flex justify-between mt-2">
+                <div className="text-sm ">${item.price.toFixed(2)}</div>
+                <div className="flex p-1">
+                  <PiShoppingCartSimpleThin
+                    className="mr-2"
+                    onClick={() => handleAddToCart(item)}
+                  />
+                  <CiHeart
+                    className="hover:text-red-500 "
+                    onClick={() => handleAddToWish(item)}
+                  />
+                </div>
               </div>
             </div>
           </div>
