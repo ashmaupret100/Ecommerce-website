@@ -1,9 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Cart from "./cart/cart";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../store";
 import { fetchMenProduct } from "../features/productSlice";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import axios from "axios";
 
 function MenSection() {
   interface Items {
@@ -14,36 +19,47 @@ function MenSection() {
     quantity: number;
     image: string;
   }
-  const menproducts = useSelector((state: RootState) => state.products.item);
-  const a = useSelector((state: RootState) => state.cart.items);
-  console.log(a);
-  console.log(menproducts);
-  const dispatch = useDispatch<AppDispatch>();
+  const [menProducts, setMenProducts] = useState<Items[]>();
 
   useEffect(() => {
-    dispatch(fetchMenProduct());
+    // Fetching data from axios
+    axios
+      .get(" http://localhost:4001/men")
+      .then((response) => {
+        setMenProducts(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+  };
   return (
-    <div>
-      <div className="m-12">
-        <p className="text-4xl">Men's New Arrivals</p>
-        <div className="flex">
-          <span>Shop All</span>
-          <span className="m-2 transform transition-transform hover:translate-x-2">
-            <IoIosArrowRoundForward />
-          </span>
-        </div>
+    <div className="m-12">
+      <p className="text-4xl">Men's New Arrivals</p>
+      <div className="flex">
+        <span>Shop All</span>
+        <span className="m-2 transform transition-transform hover:translate-x-2">
+          <IoIosArrowRoundForward />
+        </span>
       </div>
-      <div className="flex justify-evenly">
-        {menproducts.map((menitem: Items) => (
+
+      <Slider {...settings}>
+        {menProducts?.map((menitem: Items) => (
           <div key={menitem.id}>
             <Cart
               image={menitem.image}
               title={menitem.title}
-              price={menitem.price}></Cart>
+              price={menitem.price}
+            />
           </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 }

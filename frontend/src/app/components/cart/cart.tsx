@@ -12,11 +12,10 @@ const Cart = (info: IInfo) => {
           <img src={info.image} className="w-full h-80 object-cover" />
         </div>
 
-        <div className="text-black text-sm tracking-2 font-light">
+        <p className="text-black text-sm tracking-2 font-light  ">
           {info.title}
-        </div>
+        </p>
         <div className="text-sm ">$ {info.price}</div>
-        <button>Add To Cart</button>
       </div>
     </>
   );

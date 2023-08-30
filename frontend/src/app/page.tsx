@@ -29,7 +29,7 @@ export default function Home() {
               alt="Image 2"
               className="w-full "
             />
-            <div className="absolute top-1/2 left-10 left-1/2 transform -translate-x-1/2 text-white text-center p-4">
+            <div className="absolute top-1/2 left-14 left-1/2 transform -translate-x-1/2 text-white text-center p-4">
               <p className="text-lg">NYC Fashion Week</p>
             </div>
           </div>
