@@ -40,19 +40,16 @@ const wishlistpage = () => {
             {item.map((item) => (
               <div className=" p-4 h-full flex flex-col ">
                 <div className=" flex flex-col  w-72 h-96 p-4">
-                  <div>
+                  <div className="flex justify-between">
                     <AiOutlineDelete
-                      className="fill-slate-700"
+                      className="fill-slate-900"
                       onClick={() => {
                         handleRemove(item.id);
                       }}
                     />
                     <CiShoppingCart onClick={() => handleCart(item)} />
-                    <img
-                      src={item.image}
-                      className="w-full h-80 object-cover"
-                    />
                   </div>
+                  <img src={item.image} className="w-full h-80 object-cover" />
 
                   <div className="text-black text-sm tracking-2 font-light">
                     {item.title}

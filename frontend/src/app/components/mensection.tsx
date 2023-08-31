@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cart from "./cart/cart";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../store";
-import { fetchMenProduct } from "../features/productSlice";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
