@@ -19,14 +19,7 @@ export const fetchProduct = createAsyncThunk(
     return data as Product[];
   }
 );
-export const fetchMenProduct = createAsyncThunk(
-  "products/fetchproduct",
-  async () => {
-    const response = await fetch("http://localhost:4001/men");
-    const data = await response.json();
-    return data as Product[];
-  }
-);
+
 export interface Productstate {
   item: Product[];
   status: "idle" | "loading" | "succeeded" | "failed";
