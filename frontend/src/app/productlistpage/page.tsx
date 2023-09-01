@@ -13,8 +13,11 @@ import { CiHeart } from "react-icons/ci";
 import { RootState, AppDispatch } from "../store";
 import Footer from "../components/footer/footer";
 import { addToWishList } from "../features/wishListSlice";
+import { AiOutlineDown } from "react-icons/ai";
+import DropMenu from "../components/dropcategory";
 
 function ProductList() {
+  const [showSortDrop, setShowSortDrop] = useState(false);
   const cart = useSelector((state: RootState) => state.cart);
 
   // const { data, error, isLoading } = useGetAllProductsQuery();
@@ -42,18 +45,27 @@ function ProductList() {
   const handleAddToWish = (item: Items) => {
     dispatch(addToWishList(item));
   };
+
+  function DropCategory() {
+    setShowSortDrop(!showSortDrop);
+    console.log(showSortDrop);
+  }
   return (
     <>
       <Navbar />
+
       <div className="text-center mt-6">PRODUCTS</div>
+      <div className="flex ml-4">
+        <p className="  mr-2 text-xs">SORT</p>
+        <AiOutlineDown onClick={DropCategory} />
+        {showSortDrop ? <DropMenu /> : <></>}
+      </div>
+
       <div className="border-t border-gray-300 m-4"></div>
 
       <div className="flex flex-wrap -mx-4">
         {products.map((item: Items) => (
           <div key={item.id} className="w-1/4 px-4">
-            {/* <Link
-              href={`/productlistpage/[productId]`}
-              as={`/productlistpage/${item.id}`}> */}
             <Link
               href={{
                 pathname: `/productlistpage/productId`,
