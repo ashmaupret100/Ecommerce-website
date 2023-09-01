@@ -18,6 +18,7 @@ import DropMenu from "../components/dropcategory";
 
 function ProductList() {
   const [showSortDrop, setShowSortDrop] = useState(false);
+  const [sortBy, setSortBy] = useState("price");
   const cart = useSelector((state: RootState) => state.cart);
 
   // const { data, error, isLoading } = useGetAllProductsQuery();
@@ -31,13 +32,26 @@ function ProductList() {
   }
   const products = useSelector((state: RootState) => state.products.item);
   const a = useSelector((state: RootState) => state.cart.items);
-  console.log(a);
-  console.log(products);
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(fetchProduct());
   }, []);
+
+  const [sortedProducts, setSortedProducts] = useState(products);
+  const handleSortChange = (newSortBy: any) => {
+    console.log("test");
+    setSortBy(newSortBy);
+    let sortedArray = [...products];
+    if (newSortBy === "lowerprice") {
+      sortedArray.sort((a, b) => a.price - b.price);
+    } else if (newSortBy === "higherprice") {
+      sortedArray.sort((a, b) => b.price - a.price);
+    }
+
+    setSortedProducts(sortedArray);
+  };
+  console.log(sortedProducts);
 
   const handleAddToCart = (item: Items) => {
     dispatch(addToCart(item));
@@ -48,7 +62,6 @@ function ProductList() {
 
   function DropCategory() {
     setShowSortDrop(!showSortDrop);
-    console.log(showSortDrop);
   }
   return (
     <>
@@ -58,49 +71,91 @@ function ProductList() {
       <div className="flex ml-4">
         <p className="  mr-2 text-xs">SORT</p>
         <AiOutlineDown onClick={DropCategory} />
-        {showSortDrop ? <DropMenu /> : <></>}
+        {showSortDrop ? (
+          <DropMenu handleSortChange={handleSortChange} />
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className="border-t border-gray-300 m-4"></div>
 
       <div className="flex flex-wrap -mx-4">
-        {products.map((item: Items) => (
-          <div key={item.id} className="w-1/4 px-4">
-            <Link
-              href={{
-                pathname: `/productlistpage/productId`,
-                query: {
-                  search: `${item.id}`,
-                },
-              }}>
-              <div className="flex flex-col  h-96 p-4">
-                <div>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-72 object-cover"
-                  />
-                </div>
-                <div className="text-black text-sm font-normal mt-2">
-                  {item.title}
-                </div>
-                <div className="flex justify-between mt-2">
-                  <div className="text-sm ">${item.price.toFixed(2)}</div>
-                  <div className="flex p-1">
-                    <PiShoppingCartSimpleThin
-                      className="mr-2"
-                      onClick={() => handleAddToCart(item)}
-                    />
-                    <CiHeart
-                      className="hover:text-red-500 "
-                      onClick={() => handleAddToWish(item)}
-                    />
+        {sortedProducts.length === 0
+          ? products.map((item: Items) => (
+              <div key={item.id} className="w-1/4 px-4">
+                <Link
+                  href={{
+                    pathname: `/productlistpage/productId`,
+                    query: {
+                      search: `${item.id}`,
+                    },
+                  }}>
+                  <div className="flex flex-col  h-96 p-4">
+                    <div>
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-72 object-cover"
+                      />
+                    </div>
+                    <div className="text-black text-sm font-normal mt-2">
+                      {item.title}
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <div className="text-sm ">${item.price.toFixed(2)}</div>
+                      <div className="flex p-1">
+                        <PiShoppingCartSimpleThin
+                          className="mr-2"
+                          onClick={() => handleAddToCart(item)}
+                        />
+                        <CiHeart
+                          className="hover:text-red-500 "
+                          onClick={() => handleAddToWish(item)}
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
-            </Link>
-          </div>
-        ))}
+            ))
+          : sortedProducts.map((item: Items) => (
+              <div key={item.id} className="w-1/4 px-4">
+                <Link
+                  href={{
+                    pathname: `/productlistpage/productId`,
+                    query: {
+                      search: `${item.id}`,
+                    },
+                  }}>
+                  <div className="flex flex-col  h-96 p-4">
+                    <div>
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-72 object-cover"
+                      />
+                    </div>
+                    <div className="text-black text-sm font-normal mt-2">
+                      {item.title}
+                    </div>
+                    <div className="flex justify-between mt-2">
+                      <div className="text-sm ">${item.price.toFixed(2)}</div>
+                      <div className="flex p-1">
+                        <PiShoppingCartSimpleThin
+                          className="mr-2"
+                          onClick={() => handleAddToCart(item)}
+                        />
+                        <CiHeart
+                          className="hover:text-red-500 "
+                          onClick={() => handleAddToWish(item)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
       </div>
       <Footer />
     </>
