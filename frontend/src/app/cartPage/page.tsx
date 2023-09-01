@@ -8,7 +8,6 @@ import { PiSmileySadThin } from "react-icons/pi";
 import Footer from "../components/footer/footer";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
-import { Robots } from "next/dist/lib/metadata/types/metadata-types";
 
 interface Product {
   id: number;
@@ -49,8 +48,8 @@ const CartPage: React.FC = () => {
               <div className="flex justify-between ">
                 <p className="ml-4 mt-8 ml-6 text-xs">ITEM</p>
                 <div className="flex mt-8 mr-6  w-64 justify-between">
-                  <span className=" text-xs ">QUANTITY</span>
-                  <span className=" text-xs">PRICE</span>
+                  <p className=" text-xs ">QUANTITY</p>
+                  <p className=" text-xs">PRICE</p>
                 </div>
               </div>
               <div className="border-t border-gray-300 m-4"></div>
@@ -71,20 +70,21 @@ const CartPage: React.FC = () => {
                   <div className="flex justify-between w-full pt-4">
                     <div className="flex flex-col">
                       <p>{item.title}</p>
-                      <p>color</p>
                     </div>
                     <div className="flex mt-8 mr-6 w-64 justify-between">
                       <div className="border-2 flex h-8 w-28 justify-around  rounded-sm pt-2  text-2xl font-serif">
-                        <AiOutlinePlus
-                          className="text-xs"
-                          onClick={() => handleIncrement(item.id)}
-                        />
-                        <p className="text-xs ">{item.quantity}</p>
                         <AiOutlineMinus
                           className="text-xs"
                           onClick={() => handleDecrement(item.id)}
                         />
+
+                        <p className="text-xs ">{item.quantity}</p>
+                        <AiOutlinePlus
+                          className="text-xs"
+                          onClick={() => handleIncrement(item.id)}
+                        />
                       </div>
+
                       <p className=""> $ {item.price * item.quantity}</p>
                     </div>
                   </div>
