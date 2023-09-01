@@ -36,7 +36,7 @@ const CartPage: React.FC = () => {
     <>
       <Navbar />
       <div className="flex flex-col justify-center items-center">
-        <h2 className="text-3xl mt-6">Shopping Cart</h2>
+        <h2 className="text-3xl mt-6">YOUR CART</h2>
         {Items.length === 0 ? (
           <div className="flex flex-col mx-auto justify-center items-center text-3xl h-screen border-2 bg-white w-[75%] mt-4">
             <p className="p-3"> Your Cart is Empty! </p>

@@ -28,7 +28,7 @@ const wishlistpage = () => {
     <>
       <div className="w-full h-auto ">
         <Navbar />
-        <div className="text-center mt-6">WISHLIST</div>
+        <div className="text-center text-3xl mt-6">WISHLIST</div>
         <div className="border-t border-gray-300 m-4"></div>
         {item.length === 0 ? (
           <div className="flex flex-col mx-auto justify-center items-center text-3xl h-screen border-2 bg-white w-[75%]">
