@@ -29,6 +29,7 @@ function Login() {
         console.log(response.data);
         router.push("/");
         localStorage.setItem("session-token", response.data.accessToken);
+        console.log(response.data.accessToken);
       })
 
       .catch(() => {

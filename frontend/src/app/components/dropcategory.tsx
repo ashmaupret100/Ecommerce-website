@@ -18,12 +18,12 @@ function DropMenu({ handleSortChange }: any) {
         <div className="flex flex-col">
           <button
             onClick={() => handleSortChange("lowerprice")}
-            className="mb-2 hover:bg-slate-200">
+            className="mb-2 hover:bg-slate-200 text-sm p-1">
             LOWEST TO HIGHEST
           </button>
           <button
             onClick={() => handleSortChange("higherprice")}
-            className=" hover:bg-slate-200">
+            className=" text-sm p-1 hover:bg-slate-200">
             HIGHEST TO LOWEST
           </button>
         </div>
