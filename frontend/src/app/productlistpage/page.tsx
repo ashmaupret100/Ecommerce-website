@@ -121,14 +121,14 @@ function ProductList() {
             ))
           : sortedProducts.map((item: Items) => (
               <div key={item.id} className="w-1/4 px-4">
-                <Link
-                  href={{
-                    pathname: `/productlistpage/productId`,
-                    query: {
-                      search: `${item.id}`,
-                    },
-                  }}>
-                  <div className="flex flex-col  h-96 p-4">
+                <div className="flex flex-col  h-96 p-4">
+                  <Link
+                    href={{
+                      pathname: `/productlistpage/productId`,
+                      query: {
+                        search: `${item.id}`,
+                      },
+                    }}>
                     <div>
                       <img
                         src={item.image}
@@ -136,24 +136,25 @@ function ProductList() {
                         className="w-full h-72 object-cover"
                       />
                     </div>
-                    <div className="text-black text-sm font-normal mt-2">
-                      {item.title}
-                    </div>
-                    <div className="flex justify-between mt-2">
-                      <div className="text-sm ">${item.price.toFixed(2)}</div>
-                      <div className="flex p-1">
-                        <PiShoppingCartSimpleThin
-                          className="mr-2"
-                          onClick={() => handleAddToCart(item)}
-                        />
-                        <CiHeart
-                          className="hover:text-red-500 "
-                          onClick={() => handleAddToWish(item)}
-                        />
-                      </div>
+                  </Link>
+
+                  <div className="text-black text-sm font-normal mt-2">
+                    {item.title}
+                  </div>
+                  <div className="flex justify-between mt-2">
+                    <div className="text-sm ">${item.price.toFixed(2)}</div>
+                    <div className="flex p-1">
+                      <PiShoppingCartSimpleThin
+                        className="mr-2"
+                        onClick={() => handleAddToCart(item)}
+                      />
+                      <CiHeart
+                        className="hover:text-red-500 "
+                        onClick={() => handleAddToWish(item)}
+                      />
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             ))}
       </div>
