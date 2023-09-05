@@ -20,13 +20,13 @@ function Navbar() {
             <Link
               href="/productlistpage"
               className=" font-raleway tracking-2 text-slate-900 ">
-              MEN
+              SHOP ALL
             </Link>
-            <Link
-              href="/productlistpage"
-              className="text-slate-900 tracking-2 hover:text-slate-900">
-              WOMEN
-            </Link>
+            {/* <Link
+            href="/productlistpage"
+            className="text-slate-900 tracking-2 hover:text-slate-900">
+            WOMEN
+          </Link> */}
             <Link
               href="/productlistpage"
               className="text-slate-900 tracking-2 hover:text-slate-900">
