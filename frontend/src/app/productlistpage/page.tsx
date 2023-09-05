@@ -5,8 +5,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Navbar from "../components/navbar/navbar";
 import { fetchProduct } from "../features/productSlice";
-
-import { useGetAllProductsQuery } from "../features/productApi";
 import { addToCart } from "../features/cartSlice";
 import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { CiHeart } from "react-icons/ci";
@@ -14,14 +12,16 @@ import { RootState, AppDispatch } from "../store";
 import Footer from "../components/footer/footer";
 import { addToWishList } from "../features/wishListSlice";
 import { AiOutlineDown } from "react-icons/ai";
-import DropMenu from "../components/dropcategory";
+import { BsChevronDown } from "react-icons/bs";
+import DropMenu from "../components/pricedrop";
 
 function ProductList() {
   const [showSortDrop, setShowSortDrop] = useState(false);
   const [sortBy, setSortBy] = useState("price");
+  const [showCategory, setShowcategory] = useState(false);
+
   const cart = useSelector((state: RootState) => state.cart);
 
-  // const { data, error, isLoading } = useGetAllProductsQuery();
   interface Items {
     id: number;
     title: string;
@@ -30,6 +30,7 @@ function ProductList() {
     quantity: number;
     image: string;
   }
+
   const products = useSelector((state: RootState) => state.products.item);
   const a = useSelector((state: RootState) => state.cart.items);
   const dispatch = useDispatch<AppDispatch>();
@@ -39,7 +40,8 @@ function ProductList() {
   }, []);
 
   const [sortedProducts, setSortedProducts] = useState(products);
-  const handleSortChange = (newSortBy: any) => {
+
+  const handleSortChange = (newSortBy: string) => {
     console.log("test");
     setSortBy(newSortBy);
     let sortedArray = [...products];
@@ -51,6 +53,7 @@ function ProductList() {
 
     setSortedProducts(sortedArray);
   };
+
   console.log(sortedProducts);
 
   const handleAddToCart = (item: Items) => {
@@ -60,22 +63,28 @@ function ProductList() {
     dispatch(addToWishList(item));
   };
 
-  function DropCategory() {
+  function DropPriceCategory() {
     setShowSortDrop(!showSortDrop);
   }
+  function DropCategories() {
+    setShowcategory(!showCategory);
+  }
+
   return (
     <>
       <Navbar />
 
       <div className="text-center mt-6">PRODUCTS</div>
       <div className="flex ml-4">
-        <p className="  mr-2 text-xs">PRICE</p>
-        <AiOutlineDown onClick={DropCategory} />
-        {showSortDrop ? (
-          <DropMenu handleSortChange={handleSortChange} />
-        ) : (
-          <></>
-        )}
+        <div className="flex ">
+          <p className="  mr-2 text-xs">PRICE</p>
+          <AiOutlineDown onClick={DropPriceCategory} />
+          {showSortDrop ? (
+            <DropMenu handleSortChange={handleSortChange} />
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
 
       <div className="border-t border-gray-300 m-4"></div>
@@ -158,6 +167,7 @@ function ProductList() {
               </div>
             ))}
       </div>
+
       <Footer />
     </>
   );
