@@ -64,7 +64,19 @@ Users can view their wish contents and addtocart  or remove items.</p>
 </ul>
 <h2>Screenshots</h2>
 
-<p>yet to come .....</p>
+<img width="948" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/87e29ea2-6425-4237-b1f3-e4345e183065">
+<img width="950" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/b3e75532-2337-433d-870f-42650aed8f46">
+<img width="949" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/73aa8208-7ee6-4939-ad05-2dbf09cffc3a">
+<img width="943" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/0c000166-ce21-4a5c-833a-aa7f63b073f3">
+<img width="950" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/5000c563-f36b-41a6-ab70-b76278fa1d11">
+<img width="948" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/e6d5495d-46b5-4609-9455-8f17e038c0f3">
+<img width="946" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/bd886587-1f3e-4b65-8959-c8ca2d354e01">
+<img width="950" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/6ca1a3bf-1fdb-4e65-b6d5-7490740cf851">
+<img width="945" alt="image" src="https://github.com/ashmaupret100/Ecommerce-website/assets/79654872/c0f5f691-39af-4da2-85d3-1dd6d30f0677">
+
+
+
+
 
 <h2>Contributing</h2>
 <p>Contributions to this project are welcome. If you find any bugs or have suggestions for improvement, please open an issue or create a pull request.</p>
