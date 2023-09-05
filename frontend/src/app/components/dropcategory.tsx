@@ -8,13 +8,6 @@ function DropMenu({ handleSortChange }: any) {
   return (
     <>
       <div className="absolute left-0 bg-slate-100 p-2 mt-4 ml-4 z-999">
-        {/* {category_list.map((category, index) => (
-          <div key={`div_${index}`}>
-            <Link href="#" className="block text-white hover:bg-green-800 p-2">
-              {category}
-            </Link>
-          </div>
-        ))} */}
         <div className="flex flex-col">
           <button
             onClick={() => handleSortChange("lowerprice")}

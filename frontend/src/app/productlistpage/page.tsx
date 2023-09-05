@@ -69,7 +69,7 @@ function ProductList() {
 
       <div className="text-center mt-6">PRODUCTS</div>
       <div className="flex ml-4">
-        <p className="  mr-2 text-xs">SORT</p>
+        <p className="  mr-2 text-xs">PRICE</p>
         <AiOutlineDown onClick={DropCategory} />
         {showSortDrop ? (
           <DropMenu handleSortChange={handleSortChange} />

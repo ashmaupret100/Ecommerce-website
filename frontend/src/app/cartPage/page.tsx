@@ -8,6 +8,7 @@ import { PiSmileySadThin } from "react-icons/pi";
 import Footer from "../components/footer/footer";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
+import Link from "next/link";
 
 interface Product {
   id: number;
@@ -23,6 +24,9 @@ const CartPage: React.FC = () => {
   console.log(Items);
 
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
+  const itemQuantity = useSelector(
+    (state: RootState) => state.cart.itemQuantity
+  );
 
   const handleIncrement = (id: number) => {
     dispatch(increaseItem(id));
@@ -30,6 +34,10 @@ const CartPage: React.FC = () => {
 
   const handleDecrement = (id: number) => {
     dispatch(decreaseItem(id));
+  };
+
+  const handleDelete = (id: number) => {
+    dispatch(deleteItem(id));
   };
 
   return (
@@ -72,17 +80,24 @@ const CartPage: React.FC = () => {
                       <p>{item.title}</p>
                     </div>
                     <div className="flex mt-8 mr-6 w-64 justify-between">
-                      <div className="border-2 flex h-8 w-28 justify-around  rounded-sm pt-2  text-2xl font-serif">
-                        <AiOutlineMinus
-                          className="text-xs"
-                          onClick={() => handleDecrement(item.id)}
-                        />
+                      <div>
+                        <div className="border-2 flex h-8 w-28 justify-around  rounded-sm pt-2  text-2xl font-serif">
+                          <AiOutlineMinus
+                            className="text-xs"
+                            onClick={() => handleDecrement(item.id)}
+                          />
 
-                        <p className="text-xs ">{item.quantity}</p>
-                        <AiOutlinePlus
-                          className="text-xs"
-                          onClick={() => handleIncrement(item.id)}
-                        />
+                          <p className="text-xs ">{item.quantity}</p>
+                          <AiOutlinePlus
+                            className="text-xs"
+                            onClick={() => handleIncrement(item.id)}
+                          />
+                        </div>
+                        <button
+                          onClick={() => handleDelete(item.id)}
+                          className="bg-black text-white px-3 py-2 mt-2 text-sm hover:bg-white hover:border-black hover:text-black border-2 border-black">
+                          REMOVE
+                        </button>
                       </div>
 
                       <p className=""> $ {item.price * item.quantity}</p>
@@ -94,14 +109,20 @@ const CartPage: React.FC = () => {
           </div>
         )}
       </div>
-      <div className="flex flex-col justify-end ">
-        <div className="ml-auto">
-          <p className="text-sm mr-6">SUBTOTAL: $ {totalAmount}.00</p>
-          <button className="bg-black text-white px-3 py-2 mt-2 hover:bg-white hover:border-black hover:text-black border-2 border-black">
-            Checkout
-          </button>
+      {itemQuantity === 0 ? (
+        <div className="ml-4 mt-4">
+          <Link href="/productlistpage">Explore More...</Link>
         </div>
-      </div>
+      ) : (
+        <div className="flex flex-col justify-end ">
+          <div className="ml-auto">
+            <p className="text-sm mr-6">SUBTOTAL: $ {totalAmount}.00</p>
+            <button className="bg-black text-white px-3 py-2 mt-2 hover:bg-white hover:border-black hover:text-black border-2 border-black">
+              Checkout
+            </button>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>
