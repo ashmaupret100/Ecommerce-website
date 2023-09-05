@@ -43,6 +43,7 @@ const CartPage: React.FC = () => {
   return (
     <>
       <Navbar />
+
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-3xl mt-6">YOUR CART</h2>
         {Items.length === 0 ? (
