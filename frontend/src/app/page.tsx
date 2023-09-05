@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between z-10">
           <div className="relative w-1/2 ">
             <img
               src="https://images.unsplash.com/photo-1542354531-4f58dcb16fb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGRhcmslMjBmYXNoaW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"

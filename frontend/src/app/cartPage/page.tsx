@@ -22,7 +22,7 @@ const CartPage: React.FC = () => {
   const Items = useSelector((state: RootState) => state.cart.items);
   const dispatch = useDispatch();
   console.log(Items);
-
+  const token = localStorage.getItem("session-token");
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
   const itemQuantity = useSelector(
     (state: RootState) => state.cart.itemQuantity

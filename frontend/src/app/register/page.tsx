@@ -72,15 +72,15 @@ function Register() {
                 <Field
                   type="text"
                   name="name"
-                  placeholder="First Name"
+                  placeholder="Enter Name"
                   className="bg-gray-100 text-xs border border-gray-300 px-3 py-2   transition duration-300 hover:bg-gray-100 focus:outline-none "
                 />
               </div>
               <div>
                 <Field
                   type="text"
-                  name="last name"
-                  placeholder="Last Name"
+                  name="username"
+                  placeholder="Enter username"
                   className="bg-gray-100 text-xs border border-gray-300 px-3 py-2 ml-2 transition duration-300 hover:bg-gray-100 focus:outline-none  "
                 />
               </div>

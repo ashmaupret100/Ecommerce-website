@@ -1,13 +1,22 @@
-import React from "react";
+"use clients";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RootState } from "@/app/store";
+import { VscAccount } from "react-icons/vsc";
+import AccountDrop from "../accountdrop";
 function Navbar() {
+  const [showSortDrop, setShowSortDrop] = useState(false);
   const itemQuantity = useSelector(
     (state: RootState) => state.cart.itemQuantity
   );
   console.log(itemQuantity);
+  const token = localStorage.getItem("session-token");
+  function DropAccountStatus() {
+    setShowSortDrop(!showSortDrop);
+    console.log(showSortDrop);
+  }
 
   return (
     <>
@@ -49,11 +58,21 @@ function Navbar() {
               className="border border-gray-300 px-2 py-1 rounded-md"
               placeholder="Search"
             />
-            <Link
-              href="/register"
-              className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
-              SIGN IN
-            </Link>
+            {token ? (
+              <div>
+                <VscAccount className="text-lg" onClick={DropAccountStatus} />
+                {showSortDrop ? <AccountDrop /> : <></>}
+              </div>
+            ) : (
+              <div>
+                <Link
+                  href="/register"
+                  className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
+                  SIGN IN
+                </Link>
+              </div>
+            )}
+
             <Link
               href="/wishlist"
               className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">

@@ -14,6 +14,11 @@
       "email": "archu@gmail.com",
       "password": "$2a$10$EBT0qjkPwkw3cz0su4xX3uU.X6jfBDEH8ycjHmAkurL2EP/kRwABW",
       "id": 3
+    },
+    {
+      "email": "anu@gmail.com",
+      "password": "$2a$10$3.DFMg2dhQACxR/FiTV1X.VVYg5HbBFw91dV7fYvfRxXkyCXd6zcW",
+      "id": 4
     }
   ]
 }
