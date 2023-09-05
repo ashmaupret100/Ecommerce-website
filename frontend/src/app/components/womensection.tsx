@@ -6,8 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 function WomenSection() {
+  const router = useRouter();
   interface Items {
     id: number;
     title: string;
@@ -42,7 +44,9 @@ function WomenSection() {
       <div className="flex">
         <span>Shop All</span>
         <span className="m-2 transform transition-transform hover:translate-x-2">
-          <IoIosArrowRoundForward />
+          <IoIosArrowRoundForward
+            onClick={() => router.push("/productlistpage")}
+          />
         </span>
       </div>
 

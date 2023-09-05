@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Cart from "./cart/cart";
 import { IoIosArrowRoundForward } from "react-icons/io";
-
+import { useRouter } from "next/navigation";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
+import Link from "next/link";
 
 function MenSection() {
+  const router = useRouter();
   interface Items {
     id: number;
     title: string;
@@ -41,8 +43,11 @@ function MenSection() {
       <p className="text-4xl">Men's New Arrivals</p>
       <div className="flex">
         <span>Shop All</span>
+
         <span className="m-2 transform transition-transform hover:translate-x-2">
-          <IoIosArrowRoundForward />
+          <IoIosArrowRoundForward
+            onClick={() => router.push("/productlistpage")}
+          />
         </span>
       </div>
 

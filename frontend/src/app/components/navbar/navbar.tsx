@@ -78,6 +78,7 @@ function Navbar() {
               className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">
               <AiOutlineHeart />
             </Link>
+
             <Link
               href="/cartPage"
               className="font-raleway text-gray-900 tracking-2 hover:text-gray-900">

@@ -19,6 +19,16 @@
       "email": "anu@gmail.com",
       "password": "$2a$10$3.DFMg2dhQACxR/FiTV1X.VVYg5HbBFw91dV7fYvfRxXkyCXd6zcW",
       "id": 4
+    },
+    {
+      "email": "asm@gmail.com",
+      "password": "$2a$10$ZIaEX/SJenYkMSKiTxxl7.MsG7MvjvXJ4mlBAOwYr5ZC.DvPaqG0G",
+      "id": 5
+    },
+    {
+      "email": "Asu@gmail.com",
+      "password": "$2a$10$ZIZuvFH3HyEmhxb4DyQytO9utpIZ2ndIW771iqYBHWzCfgXTlgQkS",
+      "id": 6
     }
   ]
 }

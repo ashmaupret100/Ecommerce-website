@@ -51,7 +51,6 @@ function ProductDetailPage() {
       <Navbar />
       <div className="border-t border-gray-300 m-4"></div>
       <div className="flex items-center justify-between p-8">
-        {/* Product Image */}
         <div className="w-1/2">
           <img
             src={product?.image}
@@ -60,7 +59,6 @@ function ProductDetailPage() {
           />
         </div>
 
-        {/* Product Description and Add to Cart Button */}
         <div className=" w-1/2 px-8 ml-8">
           <div className=" flex flex-col items-center  ">
             <h2 className="text-3xl font-bold mb-4">{product?.title}</h2>
@@ -85,13 +83,31 @@ function ProductDetailPage() {
               </div>
             </div>
             <div className="flex ">
-              <button className="bg-black text-white px-3 py-2 m-2 hover:bg-white hover:border-black hover:text-black border-2 border-black">
+              <button
+                className="bg-black text-white px-3 py-2 m-2 hover:bg-white hover:border-black hover:text-black border-2 border-black"
+                style={{
+                  transition:
+                    "background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out",
+                  transitionDelay: "0.1s",
+                }}>
                 XS
               </button>
-              <button className="bg-black text-white px-3 py-2 m-2 hover:bg-white hover:border-black hover:text-black border-2 border-black">
+              <button
+                className="bg-black text-white px-3 py-2 m-2 hover:bg-white hover:border-black hover:text-black border-2 border-black"
+                style={{
+                  transition:
+                    "background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out",
+                  transitionDelay: "0.1s",
+                }}>
                 S
               </button>
-              <button className="bg-black text-white px-3 py-2 m-2 hover:bg-white hover:border-black hover:text-black border-2 border-black">
+              <button
+                className="bg-black text-white px-3 py-2 m-2 hover:bg-white hover:border-black hover:text-black border-2 border-black"
+                style={{
+                  transition:
+                    "background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out",
+                  transitionDelay: "0.1s",
+                }}>
                 M
               </button>
               <button className="bg-black text-white px-3 py-2 m-2 hover:bg-white hover:border-black hover:text-black border-2 border-black">
@@ -103,6 +119,11 @@ function ProductDetailPage() {
             </div>
             <button
               className="bg-black text-white px-3 py-2 mt-2 hover:bg-white hover:border-black hover:text-black border-2 border-black"
+              style={{
+                transition:
+                  "background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out",
+                transitionDelay: "0.1s",
+              }}
               onClick={() => handleAddToCart(product)}>
               Add to Cart
             </button>
