@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
-import Link from "next/link";
 
 function MenSection() {
   const router = useRouter();
@@ -40,7 +39,7 @@ function MenSection() {
   };
   return (
     <div className="m-12">
-      <p className="text-4xl">Men's New Arrivals</p>
+      <p className="text-4xl">Men&apos;s New Arrivals</p>
       <div className="flex">
         <span>Shop All</span>
 

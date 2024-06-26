@@ -29,6 +29,11 @@
       "email": "Asu@gmail.com",
       "password": "$2a$10$ZIZuvFH3HyEmhxb4DyQytO9utpIZ2ndIW771iqYBHWzCfgXTlgQkS",
       "id": 6
+    },
+    {
+      "email": "radhe@gmail.com",
+      "password": "$2a$10$3JOtZv302HE2QdpZaveV/.RrKjAqldpPNqDqy4kele.UvZne/6HTe",
+      "id": 7
     }
   ]
 }
