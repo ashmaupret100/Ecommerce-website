@@ -40,7 +40,7 @@ function WomenSection() {
   };
   return (
     <div className="m-12">
-      <p className="text-4xl">Women's New Arrivals</p>
+      <p className="text-4xl">Women&apos;s New Arrivals</p>
       <div className="flex">
         <span>Shop All</span>
         <span className="m-2 transform transition-transform hover:translate-x-2">

@@ -29,7 +29,7 @@ export default function Home() {
               <p className="text-3xl">NYC Fashion Week</p>
             </div>
             <div className="absolute top-1/2 left-2 left-1/2 transform -translate-x-1/2 text-white text-end p-4">
-              <p className="text-lg">Saturday's Nyc Shop</p>
+              <p className="text-lg">Saturday Nyc Shop</p>
             </div>
           </div>
         </div>

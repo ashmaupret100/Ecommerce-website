@@ -2,11 +2,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
-import {
-  addToWishList,
-  removeFromWishList,
-  Items,
-} from "../features/wishListSlice";
+import { removeFromWishList, Items } from "../features/wishListSlice";
 import Navbar from "../components/navbar/navbar";
 import Footer from "../components/footer/footer";
 import { PiSmileySadThin } from "react-icons/pi";
@@ -14,7 +10,7 @@ import { addToCart } from "../features/cartSlice";
 import { CiShoppingCart } from "react-icons/ci";
 import { AiOutlineDelete } from "react-icons/ai";
 
-const wishlistpage = () => {
+const Wishlistpage = () => {
   const item = useSelector((state: RootState) => state.wishlist.item);
   const dispatch = useDispatch();
 
@@ -38,9 +34,9 @@ const wishlistpage = () => {
         ) : (
           <div className="grid grid-cols-3 gap-4 w-[75%] mx-auto  text-xl p-4">
             {item.map((item) => (
-              <div className=" p-4 h-full flex flex-col ">
+              <div key={item.id} className=" p-4 h-full flex flex-col ">
                 <div className=" flex flex-col  w-72 h-96 p-4">
-                  <div className="flex justify-between">
+                  <div key={item.id} className="flex justify-between">
                     <AiOutlineDelete
                       className="fill-slate-900"
                       onClick={() => {
@@ -66,4 +62,4 @@ const wishlistpage = () => {
   );
 };
 
-export default wishlistpage;
+export default Wishlistpage;
